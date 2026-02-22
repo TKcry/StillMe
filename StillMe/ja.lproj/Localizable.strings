@@ -1,0 +1,339 @@
+/* Global */
+"cancel" = "キャンセル";
+"done" = "完了";
+"remove" = "削除";
+"error_failed" = "失敗しました";
+"time_today" = "今日";
+"time_yesterday" = "昨日";
+"time_days_ago_format" = "%d日前";
+
+/* Pair Tab */
+"pair_tab_title" = "フレンド";
+"pair_count_connected" = "%lld人と接続中";
+"no_pair_joined" = "フレンドがまだいません";
+"add_pair" = "フレンドを追加";
+"privacy_footer_text" = "フレンド相手はあなたがアクティブな時間を確認したり、特定の瞬間を共有したりできます。タイムライン全体が公開されることはありません。";
+
+/* Unpair Alert */
+"remove_pair_alert_title" = "フレンドを解除しますか？";
+"remove_pair_alert_message" = "あなたと @%@ はお互いのアクティビティを見ることができなくなります。\n再度接続するには、新しい招待を送る必要があります。";
+"remove_pair_success" = "%@ とのフレンドを解除しました";
+"remove_pair_failed" = "フレンドの解除に失敗しました";
+
+/* Pair Detail / Status */
+"nav_title_pair_status" = "アクティビティ";
+"stat_streak" = "継続日数";
+"stat_last_sync" = "最終同期";
+"calendar_title" = "今週の活動";
+"calendar_days_logged_format" = "%d日間記録済み";
+"calendar_tap_hint" = "タップして詳細を表示";
+"todays_activity" = "今日の写真";
+"you_label" = "あなた";
+"view_photos" = "写真を見る";
+"no_photos_yet" = "まだ記録がありません";
+"no_data_available" = "データがありません";
+"close" = "閉じる";
+
+/* Today Photos */
+"nav_title_todays_photos" = "今日の写真";
+"partner_label" = "フレンド";
+"today_shared_hint" = "今日の進捗はすぐにフレンドと共有されます。";
+"no_entry" = "記録なし";
+"syncing" = "同期中...";
+"privacy_mode_public" = "公開";
+"partner_label_targeted" = "限定";
+
+/* Account */
+"account_title" = "アカウント";
+"account_section_linking" = "アカウント連携";
+"account_category_account" = "アカウント";
+"account_profile_edit" = "プロフィールを編集";
+"account_section_privacy" = "プライバシー";
+"account_privacy_public" = "公開中";
+"account_privacy_private" = "非公開中";
+"account_privacy_public_desc" = "他のユーザーがIDで検索してあなたを見つけることができます。";
+"account_privacy_private_desc" = "他のユーザーがIDで検索しても、あなたは表示されません。";
+"account_privacy_hint" = "非公開にすると、他の人がIDであなたを検索できなくなります。";
+"linked_label" = "連携済み";
+"section_register_handle" = "@ハンドルの登録";
+"your_handle_placeholder" = "ユーザー名";
+"button_register" = "登録する";
+"handle_registered_success" = "ハンドルの登録が完了しました";
+"auth_failed_format" = "認証に失敗しました: %@";
+"section_nickname" = "ニックネーム";
+"nickname_placeholder" = "ニックネーム";
+"button_save" = "保存";
+"section_status" = "ステータス";
+"pair_status_label" = "フレンド状況: %@";
+
+/* Account Errors */
+"error_invalid_handle" = "ハンドルの形式が正しくありません（英数字とアンダースコア、3〜20文字）";
+"error_already_has_handle" = "ハンドルは既に登録されています";
+"error_handle_taken" = "このハンドルは既に使用されています";
+"error_auth_unavailable" = "認証状態を確認できませんでした";
+"error_process_failed_format" = "処理に失敗しました (%@)";
+
+/* Home */
+"progress_tab_title" = "ホーム";
+"this_month_progress" = "今月のアクティビティ";
+"streak_title" = "継続日数";
+"streak_days_format" = "%lld日";
+"streak_hint" = "今日写真を撮るとカウントされます";
+"recent_7_days" = "直近7日間";
+"progress_photos_label" = "枚";
+"progress_current_streak" = "現在の継続日数";
+"progress_days_label" = "日";
+"progress_over_time" = "推移・解析";
+"progress_face_mood" = "自己分析";
+"progress_last_30_days" = "過去30日間";
+"progress_avg_format" = "平均 %.1f";
+"progress_review_unrated_format" = "未評価の確認 (%d)";
+"progress_all_caught_up" = "すべて評価済み";
+"progress_no_unrated_days" = "未評価の日数はありません。";
+"progress_replay_title" = "リプレイ";
+"progress_reset_ratings_title" = "評価をリセットしますか？";
+"progress_reset_ratings_message" = "評価のみがリセットされます。写真やその他のデータは削除されません。";
+"progress_no_rating_data" = "評価データがありません";
+"progress_usual_level" = "平均値";
+"legend_captured" = "記録あり";
+"legend_missed" = "記録なし";
+
+/* Onboarding */
+"welcome_title" = "StillMeへようこそ";
+"welcome_subtitle" = "今の景色を切り取って、\n心に残る言葉を添えましょう。";
+"button_get_started" = "はじめる";
+/* Add Pair */
+"add_pair_title" = "フレンドを追加";
+"error_pair_limit_title" = "フレンドの上限に達しました";
+"error_pair_limit_message" = "5人のフレンドの上限に達しました。さらに追加するにはアップグレードが必要です。";
+"button_view_subscription" = "サブスクリプションを表示";
+"search_handle_title" = "ハンドルで検索";
+"button_search" = "検索";
+"this_is_you" = "自分自身です";
+"button_send_invite" = "招待を送る";
+"error_no_user_found" = "ユーザーが見つかりません。";
+"error_check_handle_hint" = "ハンドルを確認してもう一度お試しください。";
+"success_invite_sent" = "招待を送信しました。";
+"invites_section_title" = "届いている招待";
+"error_invite_self" = "自分自身を招待することはできません。";
+"error_invite_already_sent" = "既に招待を送信済みです。";
+"status_paired" = "フレンド済み";
+"status_invited" = "招待中";
+"error_already_paired" = "既にこのユーザーとフレンドになっています。";
+"error_pair_limit_reached" = "5人のフレンドの上限に達しました。";
+"error_failed_send_invite" = "招待の送信に失敗しました。";
+"invite_from_format" = "%@ からの招待";
+"button_decline" = "拒否";
+"button_accept" = "承認";
+
+/* Day Detail */
+"error_no_record_found" = "データが見つかりません";
+"compare_date_label" = "比較日";
+"error_generic" = "エラーが発生しました。";
+/* Global/Common */
+"cancel_label" = "キャンセル";
+"done_label" = "完了";
+"delete_label" = "削除";
+"back_label" = "戻る";
+"retake_label" = "再撮影";
+"retake_now_label" = "再撮影する";
+"use_photo_label" = "決定";
+"capture_label" = "撮影";
+"capture_now_label" = "撮影する";
+"capture_nudge_label" = "カメラを押して撮影を始める";
+"today_capture_nudge" = "今日の思い出を残そう";
+"skip_label" = "スキップ";
+"register_label" = "登録";
+"save_label" = "保存";
+"close_label" = "閉じる";
+
+/* Photo Detail */
+"delete_photo_title" = "この写真を削除しますか？";
+"delete_photo_message" = "この操作は取り消せません。";
+
+/* Settings */
+"settings_title" = "設定";
+"section_capture" = "記録";
+"capture_info_text" = "今日のアクティビティを記録し、フレンドと共有します。";
+"section_data_storage" = "データ保存";
+"data_storage_info_text" = "画像とメタデータは安全に同期・保存されます。";
+
+/* Onboarding Birthdate */
+"birthdate_optional_title" = "生年月日（任意）";
+"birthdate_hint" = "年齢が自動的に表示されます。";
+"cannot_change_later_hint" = "※後で変更することはできません";
+"register_next_label" = "登録して次へ";
+"confirm_birthdate_title" = "この生年月日で登録しますか？";
+"confirm_birthdate_message" = "年齢表示に使用されます。後で変更することはできません。";
+
+/* Calibration / Adjustment */
+"adjustment_title" = "調整";
+"adjustment_hint" = "青色のガイドを目に、\n赤色のマーカーを口に合わせてください。";
+
+/* Account UI */
+"crop_title" = "移動と拡大";
+"daily_reminder_title" = "毎日のリマインダー";
+"daily_reminder_hint" = "今日の写真を撮る時間をお知らせします。";
+"time_label" = "時間";
+"enable_notifications_hint" = "リマインダーを受け取るには、設定アプリで通知を許可してください。";
+
+/* Invite */
+"invite_sheet_title" = "招待を送る";
+"invite_sheet_hint" = "このハンドルを共有して友達と繋がりましょう。";
+"copy_handle_label" = "ハンドルをコピー";
+"shared_label" = "共有済み";
+"share_link_label" = "リンクを共有";
+"invite_message_title" = "FaceLogへの招待";
+"invite_message_body_format" = "FaceLogで繋がろう！私のハンドルは @%@ です";
+
+/* Progress / Review */
+"no_photos_available" = "利用可能な写真がありません";
+"playback_slow" = "遅く";
+"playback_fast" = "速く";
+"no_unrated_photos" = "未評価の写真はありません";
+"all_ratings_complete" = "全ての評価が完了しました！";
+"no_image_available" = "画像がありません";
+
+/* Misc Labels */
+"label_spacing" = "間隔";
+"nav_title_invites" = "招待";
+"button_create_invite_code" = "招待コードを作成";
+"enter_code_placeholder" = "コードを入力";
+"button_enter" = "入力";
+"created_at_format" = "作成日: %@";
+"stat_not_set" = "未設定";
+
+/* Camera Modes */
+"mode_daily_log" = "Window";
+"mode_first_photo" = "最初の記録";
+"mode_guide_photo" = "記録";
+"mode_daily_log_hint" = "今日のアクティビティを記録しましょう。";
+"mode_first_photo_hint" = "今日のアクティビティを切り取ってみましょう。";
+"mode_guide_photo_hint" = "記録を保存します。";
+"button_use_photo" = "保存する";
+"capture_preview_title" = "プレビュー";
+"capture_preview_subtitle" = "この写真を保存しますか？";
+"capture_already_taken_title" = "今日のアクティビティは完了しています";
+"capture_already_taken_subtitle" = "また明日お会いしましょう。";
+
+/* Onboarding Welcome Extension */
+"onboarding_title" = "StillMeへようこそ";
+"onboarding_subtitle" = "今日のアクティビティを記録して、\n二人だけの静かな時間を共有しましょう。";
+"feature_logging_title" = "日々の記録";
+"feature_logging_detail" = "今日のアクティビティを記録します。";
+"feature_sharing_title" = "二人で共有";
+"feature_sharing_detail" = "フレンドと静かに記録を共有できます。";
+"feature_tracking_title" = "アクティビティ履歴";
+"feature_tracking_detail" = "積み重なったアクティビティを振り返ることができます。";
+
+/* Onboarding Login */
+"login_step_title" = "サインインして続ける";
+"login_apple" = "Appleでサインイン";
+"login_google" = "Googleでサインイン";
+"login_footer" = "ログインすることで、利用規約とプライバシーポリシーに同意したことになります。";
+
+/* Additional Errors */
+"failed_to_save_network" = "保存に失敗しました。接続を確認してください。";
+"error_invalid_handle_detail" = "ユーザー名は3〜20文字の英数字とアンダースコアで入力してください。";
+
+/* Account Management */
+"account_section_general" = "一般";
+"account_settings_label" = "アプリ設定";
+"account_management_title" = "アカウント管理";
+"account_sign_out" = "サインアウト";
+"account_sign_out_confirm_title" = "サインアウトしてよろしいですか？";
+"account_sign_out_confirm_message" = "再度利用するにはログインが必要です。";
+"account_delete_account" = "アカウントを削除";
+"account_delete_confirm_title" = "アカウントを削除しますか？";
+"account_delete_confirm_message" = "プロフィールとすべての写真記録が完全に削除されます。この操作は取り消せません。";
+"account_delete_button" = "完全に削除する";
+
+/* About App */
+"account_section_about" = "アプリについて";
+"account_help_support" = "ヘルプとサポート";
+"help_faq_label" = "ヘルプセンター & FAQ";
+"help_terms_label" = "利用規約";
+"help_privacy_label" = "プライバシーポリシー";
+"help_contact_hint" = "ご不明な点がありましたら、サポートチームまでお問い合わせください。";
+
+/* Account Sections */
+"account_notification_settings" = "通知設定";
+"account_notification_partner_capture" = "フレンドが撮影した際の通知";
+"account_notification_partner_request" = "フレンド追加申請の通知";
+"account_privacy_blocked_users" = "ブロック中のユーザー";
+"account_privacy_hidden_pairs" = "非表示のフレンド";
+"account_privacy_management" = "コンテンツの管理";
+
+/* Menu Actions */
+"menu_mute" = "ミュート";
+"menu_block" = "ブロック";
+"menu_report" = "報告";
+"report_reason_title" = "報告理由";
+"report_sent_success" = "報告を送信しました";
+"block_confirm_title" = "ユーザーをブロックしますか？";
+"block_confirm_message" = "ブロックすると相手とのフレンドが解除され、お互いの投稿が見られなくなります。";
+"unblock" = "ブロック解除";
+"unhide" = "表示する";
+"no_blocked_users" = "ブロック中のユーザーはいません";
+"no_hidden_pairs" = "非表示のフレンドはありません";
+"mute_success" = "ミュートしました";
+"unmute_success" = "ミュート解除しました";
+"block_success" = "ブロックしました";
+"unblock_success" = "ブロックを解除しました";
+"menu_hide_pair" = "フレンドを非表示にする";
+"hide_pair_success" = "フレンドを非表示にしました";
+"unhide_pair_success" = "フレンドを表示に戻しました";
+
+/* Statistics */
+"stat_days" = "日数";
+"stat_photos" = "写真数";
+"stat_pair" = "フレンド数";
+
+/* Profile Editing */
+"edit_profile_title" = "プロフィールを編集";
+"edit_profile_nickname" = "ニックネーム";
+"edit_profile_handle" = "ユーザーID";
+"edit_profile_birthdate" = "生年月日";
+"edit_profile_handle_hint" = "あなたを識別する一意のIDです。他のユーザーがこれを使ってあなたを追加できます。";
+"edit_profile_handle_cooldown_format" = "ユーザーIDは30日に一度だけ変更できます。\n次回の変更可能日: %@";
+"edit_profile_save" = "保存";
+"edit_profile_cancel" = "キャンセル";
+"edit_profile_error_nickname_empty" = "ニックネームを入力してください。";
+
+/* Tabs */
+"tab_home" = "ホーム";
+"tab_gallery" = "ギャラリー";
+"tab_calendar" = "カレンダー";
+"tab_camera" = "撮影";
+"tab_pair" = "フレンド";
+"tab_account" = "アカウント";
+
+/* Nickname */
+"nickname_title" = "ニックネームの設定";
+"nickname_hint" = "アプリ内で表示される名前です。\n後で変更することも可能です。";
+"enter_name_placeholder" = "名前を入力";
+
+/* Handle */
+"choose_handle_title" = "ユーザーIDの登録";
+"choose_handle_hint" = "あなたを識別する一意のIDです。\n他のユーザーがあなたを見つけるのに使います。";
+"filter_public" = "公開";
+"username_placeholder" = "ユーザー名";
+"handle_chars_hint" = "※3〜20文字の英数字とアンダースコア";
+"handle_change_limit_hint" = "※一度登録すると30日間は変更できません";
+
+/* Icon / Avatar */
+"icon_step_title" = "アバターの設定";
+"icon_step_hint" = "あなたのアイコンを選びましょう。\nスキップして後で設定も可能です。";
+"avatar_source_album" = "アルバムから選ぶ";
+"avatar_source_camera" = "写真を撮る";
+"button_select_photo" = "写真を選択";
+
+/* Onboarding Done */
+"onboarding_done_title" = "準備完了！";
+"onboarding_done_subtitle" = "すべて設定できました。\nさっそく記録を始めましょう。";
+"button_go_home" = "ホームへ";
+"button_try_again_skip" = "再試行 / スキップ";
+"button_continue_regardless" = "そのまま続ける";
+
+"next_label" = "次へ";
+"progress_total_photos" = "写真";

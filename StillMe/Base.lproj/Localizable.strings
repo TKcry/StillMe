@@ -1,0 +1,260 @@
+/* Global */
+"cancel" = "Cancel";
+"done" = "Done";
+"remove" = "Remove";
+"error_failed" = "Failed";
+"time_today" = "Today";
+"time_yesterday" = "Yesterday";
+"time_days_ago_format" = "%dd ago";
+
+/* Pair Tab */
+"pair_tab_title" = "Friend";
+"pair_count_connected" = "%lld connected";
+"no_pair_joined" = "No Friend Joined";
+"add_pair" = "Add Friend";
+"privacy_footer_text" = "Friends can see when you're active and share select moments. Your full timeline remains private.";
+
+/* Unpair Alert */
+"remove_pair_alert_title" = "Remove Friend?";
+"remove_pair_alert_message" = "You and @%@ will no longer share activity.\nThis can be reconnected later by sending a new invite.";
+"remove_pair_success" = "Removed friend with %@";
+"remove_pair_failed" = "Failed to remove friend";
+
+/* Pair Detail / Status */
+"nav_title_pair_status" = "Friend Status";
+"stat_streak" = "STREAK";
+"stat_last_sync" = "LAST SYNC";
+"calendar_title" = "Activity Calendar";
+"calendar_days_logged_format" = "%d days logged";
+"calendar_tap_hint" = "Tap to view full size";
+"todays_activity" = "Today's Activity";
+"you_label" = "You";
+"view_photos" = "View Photos";
+"no_photos_yet" = "No photos yet";
+"no_data_available" = "No data available yet.";
+"close" = "Close";
+
+/* Today Photos */
+"nav_title_todays_photos" = "Today's Photos";
+"partner_label" = "Friend";
+"today_shared_hint" = "Today's progress is shared with your friend instantly.";
+"no_entry" = "No entry";
+"syncing" = "Syncing...";
+
+
+
+/* Account */
+"account_title" = "Account";
+"section_register_handle" = "Register @handle";
+"your_handle_placeholder" = "your_handle";
+"button_register" = "Register";
+"handle_registered_success" = "Handle registered successfully";
+"auth_failed_format" = "Authentication failed: %@";
+"section_nickname" = "Nickname";
+"nickname_placeholder" = "Nickname";
+"button_save" = "Save";
+"section_status" = "Status";
+"pair_status_label" = "friendStatus: %@";
+
+/* Account Errors */
+"error_invalid_handle" = "Invalid handle format (alphanumeric and _, 3-20 characters)";
+"error_already_has_handle" = "Handle is already registered";
+"error_handle_taken" = "This handle is already taken";
+"error_auth_unavailable" = "Could not verify authentication state";
+"error_process_failed_format" = "Process failed (%@)";
+
+/* Progress (Home) */
+"progress_tab_title" = "Progress";
+"this_month_progress" = "This Month's Progress";
+"streak_title" = "Streak";
+"streak_days_format" = "%lld days";
+"streak_hint" = "Counts when you take a photo today";
+"recent_7_days" = "Recent 7 Days";
+"progress_photos_label" = "photos";
+"progress_current_streak" = "CURRENT STREAK";
+"progress_days_label" = "days";
+"progress_over_time" = "OVER TIME";
+"progress_face_mood" = "Face Mood";
+"progress_last_30_days" = "Last 30 days";
+"progress_avg_format" = "Avg %.1f";
+"progress_review_unrated_format" = "Review unrated (%d)";
+"progress_all_caught_up" = "All caught up";
+"progress_no_unrated_days" = "No unrated days.";
+"progress_replay_title" = "Replay";
+"progress_reset_ratings_title" = "Reset ratings?";
+"progress_reset_ratings_message" = "This resets ratings only. Photos and other data won't be changed.";
+"progress_no_rating_data" = "No rating data available";
+"progress_usual_level" = "Your usual level";
+
+/* Onboarding */
+"welcome_title" = "Welcome to FaceLog";
+"welcome_subtitle" = "Discover a new you by recording\nyour daily changes.";
+"button_get_started" = "Get Started";
+
+/* Add Pair */
+"add_pair_title" = "Add Friend";
+"error_pair_limit_title" = "Friend Limit Reached";
+"error_pair_limit_message" = "You've reached the 5-friend limit. Upgrade to add more friends.";
+"button_view_subscription" = "View Subscription";
+"search_handle_title" = "Search by Handle";
+"button_search" = "Search";
+"this_is_you" = "This is you";
+"button_send_invite" = "Send Invite";
+"error_no_user_found" = "No user found.";
+"error_check_handle_hint" = "Check the handle and try again.";
+"success_invite_sent" = "Invite sent.";
+"invites_section_title" = "Invites";
+"error_invite_self" = "You can't invite yourself.";
+"error_invite_already_sent" = "Invite already sent.";
+"error_already_paired" = "You are already friends with this user.";
+"error_pair_limit_reached" = "You’ve reached the 5-friend limit.";
+"error_failed_send_invite" = "Failed to send invite.";
+"invite_from_format" = "Invite from %@";
+"button_decline" = "Decline";
+"button_accept" = "Accept";
+
+/* Day Detail */
+"error_no_record_found" = "No record found";
+"compare_date_label" = "Compare Date";
+"error_generic" = "An error occurred.";
+
+/* Global/Common */
+"cancel_label" = "Cancel";
+"done_label" = "Done";
+"delete_label" = "Delete";
+"back_label" = "Back";
+"retake_label" = "Retake";
+"skip_label" = "Skip";
+"register_label" = "Register";
+"save_label" = "Save";
+"close_label" = "Close";
+
+/* Photo Detail */
+"delete_photo_title" = "Delete this photo?";
+"delete_photo_message" = "This cannot be undone. Only your photo will be removed.";
+
+/* Settings */
+"settings_title" = "Settings";
+"section_capture" = "Capture";
+"capture_info_text" = "Capture is front-only; share with friend instantly.";
+"section_data_storage" = "Data Storage";
+"data_storage_info_text" = "Images are saved as front.jpg under Application Support/FaceLogLog/records; metadata is managed in records.json.";
+
+/* Onboarding Birthdate */
+"birthdate_optional_title" = "Date of Birth (Optional)";
+"birthdate_hint" = "Your age will be displayed automatically.";
+"cannot_change_later_hint" = "*Cannot be changed later";
+"register_next_label" = "Register & Next";
+"confirm_birthdate_title" = "Register with this birthdate?";
+"confirm_birthdate_message" = "Used for age display. Cannot be changed later.";
+
+/* Calibration / Adjustment */
+"adjustment_title" = "Adjustment";
+"adjustment_hint" = "Align the blue guides with your eyes.\nAlign the red marker with your mouth.";
+
+/* Account UI */
+"crop_title" = "Move and Scale";
+"daily_reminder_title" = "Daily reminder";
+"daily_reminder_hint" = "We’ll remind you to take today’s photo.";
+"time_label" = "Time";
+"enable_notifications_hint" = "Please enable notifications in System Settings to receive daily reminders.";
+
+
+/* Invite */
+"invite_sheet_title" = "Send Invite";
+"invite_sheet_hint" = "Share this handle to connect with friends.";
+"copy_handle_label" = "Copy Handle";
+"shared_label" = "Shared";
+"share_link_label" = "Share Link";
+"invite_message_title" = "FaceLog Invite";
+"invite_message_body_format" = "Add me on FaceLog! My handle is @%@";
+
+/* Progress / Review */
+"no_photos_available" = "No photos available";
+"playback_slow" = "SLOW";
+"playback_fast" = "FAST";
+"no_unrated_photos" = "No unrated photos";
+"all_ratings_complete" = "All ratings complete!";
+"no_image_available" = "No image available";
+
+/* Misc Labels */
+"label_spacing" = "Spacing";
+"nav_title_invites" = "Invites";
+"button_create_invite_code" = "Create Invite Code";
+"enter_code_placeholder" = "Enter Code";
+"button_enter" = "Enter";
+"created_at_format" = "createdAt: %@";
+"stat_not_set" = "Not Set";
+
+/* Camera Modes */
+"mode_daily_log" = "Daily Log";
+"mode_first_photo" = "First Photo";
+"mode_guide_photo" = "Guide Photo";
+"mode_daily_log_hint" = "Capture your face for today.";
+"mode_first_photo_hint" = "Start your journey by aligning your face.";
+"mode_guide_photo_hint" = "Align your face with the guide.";
+"button_use_photo" = "Use";
+"capture_preview_title" = "Review Photo";
+"capture_preview_subtitle" = "Check if it's perfectly aligned";
+"capture_already_taken_title" = "Today's photo is already taken";
+"capture_already_taken_subtitle" = "See you tomorrow!";
+
+/* Onboarding Welcome Extension */
+"onboarding_title" = "Welcome to FaceLog";
+"onboarding_subtitle" = "Log your face daily and\nenjoy seeing yourself change.";
+"feature_logging_title" = "Daily Logging";
+"feature_logging_detail" = "Capture a photo with the same guide daily.";
+"feature_sharing_title" = "Friend Sharing";
+"feature_sharing_detail" = "Share your progress with friends in real-time.";
+"feature_tracking_title" = "Track Progress";
+"feature_tracking_detail" = "Visually monitor your changes over time.";
+
+/* Additional Errors */
+"failed_to_save_network" = "Failed to save. Please check your connection.";
+"error_invalid_handle_detail" = "Username must be 3-20 characters (a-z, 0-9, _)";
+
+/* Account Management */
+"account_section_general" = "General";
+"account_settings_label" = "App Settings";
+"account_profile_edit" = "Edit Profile";
+"account_management_title" = "Account Management";
+"account_sign_out" = "Sign Out";
+"account_delete_account" = "Delete Account";
+"account_delete_confirm_title" = "Delete Account?";
+"account_delete_confirm_message" = "This will permanently delete your profile and all photo records. This action cannot be undone.";
+"account_delete_button" = "Delete Permanently";
+
+/* About App */
+"account_section_about" = "About App";
+"account_help_support" = "Help & Support";
+"help_faq_label" = "Help Center & FAQ";
+"help_terms_label" = "Terms of Service";
+"help_privacy_label" = "Privacy Policy";
+"help_contact_hint" = "If you have any questions, please contact our support team.";
+
+/* Account Sections */
+"account_notification_settings" = "Notifications";
+"account_pair_count_format" = "%d Friend";
+
+/* Statistics */
+"stat_days" = "Days";
+"stat_photos" = "Photos";
+"stat_pair" = "Friend";
+
+/* Profile Editing */
+"edit_profile_title" = "Edit Profile";
+"edit_profile_nickname" = "NICKNAME";
+"edit_profile_handle" = "HANDLE";
+"edit_profile_birthdate" = "BIRTHDATE";
+"edit_profile_handle_hint" = "Your unique ID. Others can add you with it.";
+"edit_profile_handle_cooldown_format" = "You can change your handle once every 30 days.\nNext change available on: %@";
+"edit_profile_save" = "Save";
+"edit_profile_cancel" = "Cancel";
+"edit_profile_error_nickname_empty" = "Nickname cannot be empty.";
+
+/* Tabs */
+"tab_progress" = "Progress";
+"tab_calendar" = "Calendar";
+"tab_camera" = "Camera";
+"tab_pair" = "Friend";
+"tab_account" = "Account";
