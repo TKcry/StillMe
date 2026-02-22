@@ -15,16 +15,6 @@ export default function HelpCenter() {
 
     return (
         <div className="max-w-4xl mx-auto py-12 px-6">
-            <button
-                onClick={() => window.history.back()}
-                className="text-white hover:text-gray-300 transition-colors mb-6 flex items-center group"
-                aria-label="Back"
-            >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-
             <div className="flex justify-between items-start mb-8">
                 <div>
                     <h1 className="text-3xl font-bold mb-2">
