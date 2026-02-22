@@ -249,6 +249,10 @@ extension Date {
     var yyyyMMdd: String {
         DateFormatter.yyyyMMdd.string(from: self)
     }
+
+    var startOfDay: Date {
+        Calendar.current.startOfDay(for: self)
+    }
     
     var dayString: String {
         let formatter = DateFormatter()

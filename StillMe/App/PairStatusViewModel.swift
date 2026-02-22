@@ -19,6 +19,7 @@ class PairStatusViewModel: ObservableObject {
     @Published var isWeeklyUnlocked: Bool = false
     @Published var requiredDays: Int = 7
     @Published var weeklyProgress: WeekProgress? = nil
+    @Published var historyPurgedAt: Date? = nil
     
     
     // Keep raw data to allow recalculation
@@ -299,6 +300,11 @@ class PairStatusViewModel: ObservableObject {
                 let s1 = myCaptured
                 let s2 = partnerCaptured
 
+                // Phase 295: Respect historyPurgedAt
+                if let purgeAt = historyPurgedAt, checkDate < purgeAt {
+                    break
+                }
+
                 if s1 && s2 {
                     newStreak += 1
                 } else if key == todayKey {
@@ -440,6 +446,12 @@ class PairStatusViewModel: ObservableObject {
                     bothDone: publicDone || targetedDone,
                     isToday: isToday
                 )
+            }.filter { day in
+                // Phase 295: Respect historyPurgedAt for calendar lamps
+                if let purgeAt = historyPurgedAt {
+                    return day.date >= purgeAt.startOfDay
+                }
+                return true
             }
             allWeeks.insert(weekStatus, at: 0) // Reverse so last week is index 0, this week is index 1?
             // Actually, user wants to "slide to see last week", so typically [Last Week, This Week].
@@ -470,6 +482,14 @@ class PairStatusViewModel: ObservableObject {
         
         db.collection("pairs").document(pairId).addSnapshotListener { [weak self] snap, err in
             guard let self = self, let data = snap?.data() else { return }
+            
+            // Phase 295: Read historyPurgedAt
+            if let hpTs = data["historyPurgedAt"] as? Timestamp {
+                self.historyPurgedAt = hpTs.dateValue()
+                print("[PairStatus] historyPurgedAt detected: \(self.historyPurgedAt!)")
+            } else {
+                self.historyPurgedAt = nil
+            }
             
             // 🔥 Task C: Predict requiredDays based on JST pairedLocalDate
             let pLocalDate = data["pairedLocalDate"] as? String

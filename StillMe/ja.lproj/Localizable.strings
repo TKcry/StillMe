@@ -16,9 +16,10 @@
 
 /* Unpair Alert */
 "remove_pair_alert_title" = "フレンドを解除しますか？";
-"remove_pair_alert_message" = "あなたと @%@ はお互いのアクティビティを見ることができなくなります。\n再度接続するには、新しい招待を送る必要があります。";
+"remove_pair_alert_message" = "解除後も30日間はデータが保持され、再接続すれば復元可能です。猶予期間を過ぎると、二人の共有記録は永久に削除されます。";
 "remove_pair_success" = "%@ とのフレンドを解除しました";
 "remove_pair_failed" = "フレンドの解除に失敗しました";
+"menu_unpair" = "解除";
 
 /* Pair Detail / Status */
 "nav_title_pair_status" = "アクティビティ";
@@ -245,8 +246,10 @@
 "account_sign_out_confirm_message" = "再度利用するにはログインが必要です。";
 "account_delete_account" = "アカウントを削除";
 "account_delete_confirm_title" = "アカウントを削除しますか？";
-"account_delete_confirm_message" = "プロフィールとすべての写真記録が完全に削除されます。この操作は取り消せません。";
-"account_delete_button" = "完全に削除する";
+"account_delete_confirm_message" = "退会後、30日間はデータの復元が可能です。猶予期間を過ぎると、すべての写真記録が永久に削除されます。";
+"account_delete_button" = "アカウントを削除";
+"account_restored_title" = "おかえりなさい！";
+"account_restored_message" = "削除申請が取り消され、データが復旧しました。";
 
 /* About App */
 "account_section_about" = "アプリについて";

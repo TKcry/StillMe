@@ -75,7 +75,7 @@ struct PairListView: View {
                         store.postNotice("Unpairing failed: \(error.localizedDescription)")
                       }
                     }
-                  } label: { Text("Unpair") }
+                  } label: { Text(NSLocalizedString("menu_unpair", comment: "")) }
                 }
               }
             }

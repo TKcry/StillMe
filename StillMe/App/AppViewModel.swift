@@ -71,7 +71,7 @@ class AppViewModel: ObservableObject {
     @AppStorage("isDailyReminderEnabled") var isDailyReminderEnabled: Bool = false
     @AppStorage("reminderTime") var reminderTime: Double = 28800 // Default to 8:00 AM (8 * 3600)
     
-    static let MAX_PAIRS = 5 // ✅ Increased pair limit to 5
+    static let MAX_PAIRS = 999 // ✅ Increased pair limit to allow virtually unlimited friends
     
     // Bridge to K's logic
     let recordsStore = RecordsStore()
@@ -1320,25 +1320,20 @@ class AppViewModel: ObservableObject {
             do {
                 guard let uid = Auth.auth().currentUser?.uid else { return }
                 
-                print("[DEBUG][AccountDelete] Starting deletion for \(uid)...")
+                print("[DEBUG][AccountDelete] Requesting deletion for \(uid)... (Grace period active)")
                 
-                // 1. Delete user document and subcollections in Firestore
-                // Phase 270: Explicitly clear today's personal daily log to prevent state leakage on same-UID re-registration
-                let personalTodayRef = Firestore.firestore().collection("users").document(uid).collection("daily").document(Date().yyyyMMdd)
-                try? await personalTodayRef.delete()
+                // Set the deletion request timestamp and TTL expiry
+                let expireAt = Calendar.current.date(byAdding: .day, value: 30, to: Date()) ?? Date().addingTimeInterval(30 * 24 * 3600)
+                try await Firestore.firestore().collection("users").document(uid).setData([
+                    "deletionRequestedAt": FieldValue.serverTimestamp(),
+                    "expireAt": Timestamp(date: expireAt)
+                ], merge: true)
                 
-                // Also common practice to delete the root user document
-                try? await Firestore.firestore().collection("users").document(uid).delete()
-                
-                // 2. Sign Out
+                // Sign Out immediately
                 signOut()
                 
-                // 3. Delete Firebase User
-                try await Auth.auth().currentUser?.delete()
-                print("[DEBUG][AccountDelete] Firebase user deleted successfully.")
-                
             } catch {
-                print("[ERROR][AccountDelete] Deletion failed: \(error.localizedDescription)")
+                print("[ERROR][AccountDelete] Deletion request failed: \(error.localizedDescription)")
             }
         }
     }

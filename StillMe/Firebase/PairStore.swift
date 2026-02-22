@@ -1973,11 +1973,13 @@ final class PairStore: ObservableObject {
             }
             let u1Count = (u1Snap.data()?["pairCount"] as? Int) ?? 0
             let u2Count = (u2Snap.data()?["pairCount"] as? Int) ?? 0
+            /*
             if u1Count >= 5 || u2Count >= 5 {
                 print("[PairStore][sendInvite] maxPairsReached: u1(\(u1))=\(u1Count), u2(\(u2))=\(u2Count)")
                 errorPointer?.pointee = NSError(domain: "PairStore", code: 422, userInfo: [NSLocalizedDescriptionKey: "maxPairsReached"])
                 return nil
             }
+            */
 
             if hasIncomingPending {
                 // AUTO-PAIRING
@@ -2133,10 +2135,12 @@ final class PairStore: ObservableObject {
                 }
                 let u1Count = (u1Snap.exists ? (u1Snap.data()? ["pairCount"] as? Int) : nil) ?? 0
                 let u2Count = (u2Snap.exists ? (u2Snap.data()? ["pairCount"] as? Int) : nil) ?? 0
+                /*
                 if u1Count >= 5 || u2Count >= 5 {
                     errorPointer?.pointee = NSError(domain: "PairStore", code: 422, userInfo: [NSLocalizedDescriptionKey: "maxPairsReached"])
                     return nil
                 }
+                */
 
                 // pairRefs read for createdAt protection
                 let u1PairRef = u1Ref.collection("pairRefs").document(pairId)
@@ -2163,10 +2167,23 @@ final class PairStore: ObservableObject {
                         "updatedAt": FieldValue.serverTimestamp()
                     ], forDocument: pairRef, merge: false)
                 } else {
-                    transaction.updateData([
+                    let archivedAt = (pairSnap.data()?["archivedAt"] as? Timestamp)?.dateValue()
+                    let gracePeriod: TimeInterval = 30 * 24 * 3600
+                    var updateData: [String: Any] = [
                         "archived": false,
-                        "updatedAt": FieldValue.serverTimestamp()
-                    ], forDocument: pairRef)
+                        "updatedAt": FieldValue.serverTimestamp(),
+                        "expireAt": FieldValue.delete() // Invalidate TTL upon restoration
+                    ]
+                    
+                    if let archivedAt = archivedAt, Date().timeIntervalSince(archivedAt) > gracePeriod {
+                        print("[PairStore] Restore after 30 days. Setting historyPurgedAt.")
+                        updateData["historyPurgedAt"] = FieldValue.serverTimestamp()
+                        // Reset paired metadata to start fresh
+                        updateData["pairedLocalDate"] = FieldValue.delete()
+                        updateData["pairedWeekKey"] = FieldValue.delete()
+                    }
+                    
+                    transaction.updateData(updateData, forDocument: pairRef)
                 }
 
                 transaction.updateData([
@@ -2289,10 +2306,12 @@ final class PairStore: ObservableObject {
 
                 // ---- WRITES ----
                 if !alreadyArchived {
+                    let expireAt = Calendar.current.date(byAdding: .day, value: 30, to: Date()) ?? Date().addingTimeInterval(30 * 24 * 3600)
                     transaction.updateData([
                         "archived": true,
                         "archivedAt": FieldValue.serverTimestamp(),
                         "archivedBy": me,
+                        "expireAt": Timestamp(date: expireAt),
                         "updatedAt": FieldValue.serverTimestamp()
                     ], forDocument: pairRef)
                 }

@@ -38,8 +38,7 @@ struct HelpSupportView: View {
                                 .padding(.horizontal, 16)
                             
                             // Terms of Service
-                            // FIXME: Replace with your actual App Hosting URL after deployment
-                            Link(destination: URL(string: "https://stillme-legal-docs.firebaseapp.com/terms")!) {
+                            Link(destination: URL(string: "https://stillme-legal-docs--stillme-6db26.us-east4.hosted.app/terms")!) {
                                 HStack(spacing: Spacing.md) {
                                     Image(systemName: "doc.text")
                                         .font(.system(size: 18))
@@ -65,8 +64,7 @@ struct HelpSupportView: View {
                                 .padding(.horizontal, 16)
                             
                             // Privacy Policy
-                            // FIXME: Replace with your actual App Hosting URL after deployment
-                            Link(destination: URL(string: "https://stillme-legal-docs.firebaseapp.com/privacy")!) {
+                            Link(destination: URL(string: "https://stillme-legal-docs--stillme-6db26.us-east4.hosted.app/privacy")!) {
                                 HStack(spacing: Spacing.md) {
                                     Image(systemName: "hand.raised")
                                         .font(.system(size: 18))

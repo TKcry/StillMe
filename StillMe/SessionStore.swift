@@ -1,6 +1,7 @@
 import Foundation
 import Combine
 import FirebaseAuth
+import FirebaseFirestore
 import AuthenticationServices
 import CryptoKit
 import GoogleSignIn
@@ -50,6 +51,49 @@ final class SessionStore: ObservableObject {
                 try? Auth.auth().signOut()
             }
             return 
+        }
+
+        // --- Phase: Account Deletion Grace Period Check ---
+        let db = Firestore.firestore()
+        let userRef = db.collection("users").document(user.uid)
+        
+        do {
+            let snap = try await userRef.getDocument()
+            if let data = snap.data(), let requestedAt = (data["deletionRequestedAt"] as? Timestamp)?.dateValue() {
+                let gracePeriodSeconds: TimeInterval = 30 * 24 * 60 * 60 // 30 days
+                let now = Date()
+                
+                if now.timeIntervalSince(requestedAt) < gracePeriodSeconds {
+                    // RESTORE: Cancel deletion request
+                    print("[SessionStore] ♻️ Deletion requested less than 30 days ago. RESTORING account.")
+                    try await userRef.updateData([
+                        "deletionRequestedAt": FieldValue.delete(),
+                        "expireAt": FieldValue.delete()
+                    ])
+                    // Optional: Show restoration success message via NotificationCenter or similar
+                    // For now, it just proceeds to sign in.
+                } else {
+                    // PURGE: 30 days have passed. Wipe data and Auth user.
+                    print("[SessionStore] 💀 Grace period expired. PURGING user data.")
+                    
+                    // 1. Wipe Firestore document (Root only for now, subcollections remain but unlinked)
+                    try await userRef.delete()
+                    
+                    // 2. Wipe Firebase Auth User
+                    try await user.delete()
+                    
+                    // 3. Sign out local state
+                    print("[SessionStore] Purge complete. Signing out.")
+                    try? Auth.auth().signOut()
+                    self.isSignedIn = false
+                    self.uid = nil
+                    return
+                }
+            }
+        } catch {
+            print("[SessionStore][GraceCheck] Error checking deletion status: \(error.localizedDescription)")
+            // If it's a permission error or something, we might still proceed, 
+            // but if the user doc is gone, it just proceeds as a new user.
         }
         
         self.isSignedIn = true
