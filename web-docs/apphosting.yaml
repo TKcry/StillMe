@@ -1,0 +1,6 @@
+# apphosting.yaml
+# Learn more: https://firebase.google.com/docs/app-hosting/configure
+
+# Node.js version to use
+runtime:
+  node: 20
