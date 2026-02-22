@@ -11,8 +11,8 @@ struct HelpSupportView: View {
                 VStack(spacing: Spacing.xl) {
                     AppCard(padding: 0, cornerRadius: Radius.lg) {
                         VStack(spacing: 0) {
-                            // Help Center / FAQ (Example URL)
-                            Link(destination: URL(string: "https://example.com/help")!) {
+                            // Help Center
+                            Link(destination: URL(string: "https://stillme-legal-docs--stillme-6db26.us-east4.hosted.app/help")!) {
                                 HStack(spacing: Spacing.md) {
                                     Image(systemName: "questionmark.circle")
                                         .font(.system(size: 18))

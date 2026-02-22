@@ -254,7 +254,7 @@
 /* About App */
 "account_section_about" = "アプリについて";
 "account_help_support" = "ヘルプとサポート";
-"help_faq_label" = "ヘルプセンター & FAQ";
+"help_faq_label" = "ヘルプセンター";
 "help_terms_label" = "利用規約";
 "help_privacy_label" = "プライバシーポリシー";
 "help_contact_hint" = "ご不明な点がありましたら、サポートチームまでお問い合わせください。";
